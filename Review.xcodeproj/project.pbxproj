@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC3E909D23CE7DFC00DCD1F6 /* ReviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3E909C23CE7DFC00DCD1F6 /* ReviewView.h */; };
-		BC3E909F23CE7DFC00DCD1F6 /* ReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E909E23CE7DFC00DCD1F6 /* ReviewView.m */; };
+		BC3E90A723CE7E5800DCD1F6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E90A623CE7E5800DCD1F6 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC3E909923CE7DFC00DCD1F6 /* Review.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Review.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC3E909C23CE7DFC00DCD1F6 /* ReviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewView.h; sourceTree = "<group>"; };
-		BC3E909E23CE7DFC00DCD1F6 /* ReviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewView.m; sourceTree = "<group>"; };
 		BC3E90A023CE7DFC00DCD1F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC3E90A623CE7E5800DCD1F6 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +46,8 @@
 		BC3E909B23CE7DFC00DCD1F6 /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				BC3E909C23CE7DFC00DCD1F6 /* ReviewView.h */,
-				BC3E909E23CE7DFC00DCD1F6 /* ReviewView.m */,
 				BC3E90A023CE7DFC00DCD1F6 /* Info.plist */,
+				BC3E90A623CE7E5800DCD1F6 /* Review.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -62,7 +59,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3E909D23CE7DFC00DCD1F6 /* ReviewView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +94,7 @@
 				TargetAttributes = {
 					BC3E909823CE7DFC00DCD1F6 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -134,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3E909F23CE7DFC00DCD1F6 /* ReviewView.m in Sources */,
+				BC3E90A723CE7E5800DCD1F6 /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +250,21 @@
 		BC3E90A423CE7DFC00DCD1F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QP37J7KYE;
 				INFOPLIST_FILE = Review/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericbuess.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -267,13 +272,20 @@
 		BC3E90A523CE7DFC00DCD1F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QP37J7KYE;
 				INFOPLIST_FILE = Review/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericbuess.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
